@@ -16,6 +16,8 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private UtilisateurRepository utilisateurRepository;
 
+    // the userDetails interface represents an authenticated user object 
+    // this method will retreive UserDetails from database
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Utilisateur user = utilisateurRepository.findByUsername(username);

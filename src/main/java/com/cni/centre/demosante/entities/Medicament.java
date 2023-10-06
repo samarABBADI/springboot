@@ -25,7 +25,7 @@ public class Medicament {
 	private String ref;
 	
 	@Column(name = "intitile")
-	private String intitile;
+	private String intutile;
 	@JsonIgnore
 	@Column(name = "description")
 	private String description;
@@ -49,10 +49,10 @@ public class Medicament {
 
 
 
-	public Medicament(String ref, String intitile, String description, Integer nbrecomprimes, Specialite specialite) {
+	public Medicament(String ref, String intutile, String description, Integer nbrecomprimes, Specialite specialite) {
 		super();
 		this.ref = ref;
-		this.intitile = intitile;
+		this.intutile = intutile;
 		this.description = description;
 		this.nbrecomprimes = nbrecomprimes;
 		this.specialite = specialite;
@@ -85,13 +85,13 @@ public class Medicament {
 	}
 
 
-	public String getIntitile() {
-		return intitile;
+	public String getIntutile() {
+		return intutile;
 	}
 
 
-	public void setIntitile(String intitile) {
-		this.intitile = intitile;
+	public void setIntutile(String intutile) {
+		this.intutile = intutile;
 	}
 
 

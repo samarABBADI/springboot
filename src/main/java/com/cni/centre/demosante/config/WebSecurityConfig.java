@@ -16,10 +16,11 @@ import com.cni.centre.demosante.services.CustomUserDetailsService;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
-	
+	// service that retrieve user details from database
 	     @Autowired
 	    CustomUserDetailsService userDetailsService;
 
+	     // bean for encoding password using Bcrypt
 	    @Bean
 	    public PasswordEncoder passwordEncoder() {
 	        return new BCryptPasswordEncoder();
@@ -34,12 +35,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception
 	{
-		
-		http.csrf().disable();
-		http.authorizeRequests()
+		 
+		http.csrf().disable();      // disable csrf 
+		http.authorizeRequests()     
 		.antMatchers("/role")
-        .hasRole("admin")
-		.anyRequest().authenticated()
+        .hasRole("admin")       // route with "/role"/ only how has role admin can access them
+		.anyRequest().authenticated()    // any other request must be authenticated
 		.and()
 		.httpBasic();
 		

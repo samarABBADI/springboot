@@ -14,11 +14,11 @@ import com.cni.centre.demosante.entities.Utilisateur;
 public interface MedicamentRepository extends JpaRepository<Medicament, String>{
 
 	public Medicament findByRef (String ref);
-	public Medicament findByIntitile (String intutile);
-	public Medicament findByIntitileAndDescription (String intutile, String description);
-	public Medicament findByIntitileLike (String intutile);
-	public Medicament findByIntitileContaining (String intutile);
-	public boolean  existsByIntilile (String intutile);
+	public Medicament findByIntutile(String intutile);
+	public Medicament findByIntutileAndDescription (String intutile, String description);
+	public Medicament findByIntutileLike (String intutile);
+	public Medicament findByIntutileContaining (String intutile);
+	public boolean  existsByIntutile (String intutile);
 	public boolean  existsByRef(String ref);
 	
 	

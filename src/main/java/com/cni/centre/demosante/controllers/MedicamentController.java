@@ -80,7 +80,7 @@ public class MedicamentController {
 			for(Medicament med:medList) {
 				MedicamentRequest mreq = new MedicamentRequest();
 				mreq.setDescription(med.getDescription());
-				mreq.setIntitule(med.getIntitile());
+				mreq.setIntitule(med.getIntutile());
 				mreq.setNbreMed(med.getNbrecomprimes());
 				mreq.setSpId(med.getSpecialite().getSpId());
 				medReqList.add(mreq);

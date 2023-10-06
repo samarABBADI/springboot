@@ -50,7 +50,7 @@ public class MedicamentService {
 				Medicament medic = new Medicament();
 				medic.setRef(ref);
 				medic.setDescription(medicament.getDescription());
-				medic.setIntitile(medicament.getIntitule());
+				medic.setIntutile(medicament.getIntitule());
 				medic.setNbrecomprimes(medicament.getNbreMed());
 				Specialite specialite = specialiteRepository.findById(medicament.getSpId()).get();
 				medic.setSpecialite(specialite);
@@ -98,7 +98,7 @@ public MedicamentTotal totMedicaments() {
 	return medicamentTotal;
 }
 
-
+/*
 
 
 public MedicamentBean updateMedicament (String id, Medicament medicament) {
@@ -111,7 +111,7 @@ public MedicamentBean updateMedicament (String id, Medicament medicament) {
 
 			if(m!=null) {
 				m.setRef(medicament.getRef());
-				m.setIntitile(medicament.getIntitile());
+				m.setIntutile(medicament.getIntutile());
 				m.setDescription(medicament.getDescription());
 				m.setNbrecomprimes(medicament.getNbrecomprimes());
 				m.setSpecialite(medicament.getSpecialite());
@@ -164,7 +164,7 @@ return msg;
 }
 
 
-
+*/
 
 
 

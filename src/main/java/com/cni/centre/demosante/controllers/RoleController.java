@@ -76,7 +76,7 @@ try {
 		//if(rbean==null) {
 		//	return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Not exist");
 		//}
-		return ResponseEntity.status(HttpStatus.OK).body(rbean);
+		return ResponseEntity.status(HttpStatus.OK).body(role.getLibrol());
 		}catch(Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
 		}
